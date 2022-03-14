@@ -28,21 +28,30 @@ fn graphql(
 }
 
 fn graphiql() -> HttpResponse {
-    let html = graphiql_source("http://localhost:8080/graphql");
+    let html = graphiql_source("http://localhost:8081/graphql");
     HttpResponse::Ok()
         .content_type("text/html; charset=utf-8")
         .body(html)
 }
 
+fn main_page() -> HttpResponse {
+    HttpResponse::Ok()
+        .content_type("text/html; charset=utf-8")
+        .body("Navigate to /graphql to see the GraphQL playground.")
+}
+
 fn main() -> io::Result<()> {
     let schema = std::sync::Arc::new(schema::create_schema());
     HttpServer::new(move || {
-        App::new().data(schema.clone()).service(
-            web::resource("/graphql")
-                .route(web::post().to_async(graphql))
-                .route(web::get().to(graphiql)),
-        )
+        App::new()
+            .data(schema.clone())
+            .service(
+                web::resource("/graphql")
+                    .route(web::post().to_async(graphql))
+                    .route(web::get().to(graphiql)),
+            )
+            .service(web::resource("/").route(web::get().to(main_page)))
     })
-    .bind("localhost:8080")?
+    .bind("localhost:8081")?
     .run()
 }

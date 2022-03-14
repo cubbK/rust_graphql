@@ -1,5 +1,5 @@
 [package]
-name = "rust_graphql"
+name = "rust_graphql2"
 version = "0.1.0"
 edition = "2021"
 
@@ -14,4 +14,7 @@ juniper = "0.13.1"
 serde = "1.0"
 serde_derive = "1.0"
 serde_json = "1.0"
+
+[dev-dependencies]
+cargo-watch = "8.1.1"
 
