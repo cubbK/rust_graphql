@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "graph1"
+    },
+    {
+      "path": "graph2"
+    },
+    {
+      "path": "federation"
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#1C3133",
+      "titleBar.activeBackground": "#284547",
+      "titleBar.activeForeground": "#F7FAFB"
+    }
+  }
+}
