@@ -1,0 +1,11 @@
+{
+  "name": "rust_graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cubbK/rust_graphql.git",
+  "author": "Dan Popa <danpopa1998@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@apollo/rover": "^0.4.5"
+  }
+}
