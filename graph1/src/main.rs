@@ -42,6 +42,7 @@ fn main_page() -> HttpResponse {
 
 fn main() -> io::Result<()> {
     let schema = std::sync::Arc::new(schema::create_schema());
+
     HttpServer::new(move || {
         App::new()
             .data(schema.clone())
