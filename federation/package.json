@@ -4,14 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node federation.ts"
+    "start": "nodemon federation.ts"
   },
   "dependencies": {
     "@types/koa": "^2.13.4",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.1.0",
     "koa": "^2.13.4",
     "ts-node": "^10.7.0",
-    "typescript": "^4.6.2",
-    "graphql": "^16.3.0",
-    "graphql-request": "^4.1.0"
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

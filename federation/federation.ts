@@ -21,13 +21,12 @@ const queryGraph2 = gql`
 const app = new Koa();
 
 app.use(async (ctx) => {
-  const result1 = await request("http://localhost:8081/graphql", queryGraph1);
-  const result2 = await request("http://localhost:8082/graphql", queryGraph2);
+//   const result1 = await request("http://localhost:8081/graphql", queryGraph1);
+//   const result2 = await request("http://localhost:8082/graphql", queryGraph2);
 
   ctx.body = `
     It's working!
-    ${JSON.stringify(result1, null, 2)}
-    ${JSON.stringify(result2, null, 2)}
+  
   `;
 });
 
